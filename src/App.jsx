@@ -1,9 +1,9 @@
-import Challenge4 from './challenge4';
+import Challenge5 from './challenge5';
 
 function App() {
   return (
     <div>
-      <Challenge4 />
+      <Challenge5 />
     </div>
   );
 }
