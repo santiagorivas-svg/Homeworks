@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Función para generar una fecha de llegada aleatoria dentro de los últimos 60 minutos
 const getRandomArrivalDate = () => {
