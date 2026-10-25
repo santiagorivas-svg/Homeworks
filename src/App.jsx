@@ -1,7 +1,7 @@
-import Challenge8 from "./Challenge8";
+import Challenge9 from './Challenge9';
 
 function App() {
-  return <Challenge8 />;
+  return <Challenge9 />;
 }
 
 export default App;
