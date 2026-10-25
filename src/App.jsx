@@ -1,7 +1,7 @@
-import Parcial2 from './Parcial2';
+import Challenge8 from "./Challenge8";
 
 function App() {
-  return <Parcial2 />;
+  return <Challenge8 />;
 }
 
 export default App;
