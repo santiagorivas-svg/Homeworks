@@ -1,7 +1,11 @@
-import Challenge10 from './Challenge10';
+import { Challenge12 } from './Challenge12';
 
 function App() {
-  return <Challenge10 />;
+  return (
+    <div>
+      <Challenge12 />
+    </div>
+  );
 }
 
 export default App;
