@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+@mixin card-panel {
+  background-color: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-md;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@mixin song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $bg-card-hover;
+  }
+}
+
+@mixin pill-button($bg: $accent-green, $color: #000) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  border-radius: $radius-pill;
+  padding: 0.45rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    background-color: $accent-green-hover;
+  }
+}

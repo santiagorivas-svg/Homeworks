@@ -1,0 +1,164 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.spotify-edu-dashboard {
+  min-height: 100vh;
+  background-color: $bg-main;
+  color: $text-primary;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $border-subtle;
+    padding-bottom: 1rem;
+
+    h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      span {
+        color: $accent-green;
+      }
+    }
+
+    p {
+      margin: 0.25rem 0 0;
+      color: $text-secondary;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $gap-base;
+  }
+
+  .panel-card {
+    @include card-panel;
+
+    h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      small {
+        font-size: 0.75rem;
+        color: $accent-green;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .search-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+
+    input {
+      background: #242424;
+      border: 1px solid $border-subtle;
+      border-radius: 6px;
+      padding: 0.65rem 0.85rem;
+      color: $text-primary;
+      font-size: 0.95rem;
+      outline: none;
+
+      &:focus {
+        border-color: $accent-green;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+
+  .btn-primary {
+    @include pill-button();
+  }
+
+  .btn-secondary {
+    @include pill-button(#2a2a2a, $text-primary);
+    &:hover {
+      background-color: #3a3a3a;
+    }
+  }
+
+  .status-badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    background: rgba(29, 185, 84, 0.12);
+    color: $accent-green;
+  }
+
+  .song-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      @include song-item;
+
+      &.active {
+        border: 1px solid $accent-green;
+      }
+
+      .song-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+
+        strong {
+          font-size: 0.95rem;
+        }
+        span {
+          font-size: 0.8rem;
+          color: $text-secondary;
+        }
+      }
+
+      .song-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+
+        .plays {
+          font-size: 0.8rem;
+          color: $text-secondary;
+        }
+      }
+    }
+  }
+
+  .add-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid $border-subtle;
+
+    input {
+      flex: 1;
+      min-width: 0;
+      background: #242424;
+      border: 1px solid $border-subtle;
+      border-radius: 6px;
+      padding: 0.5rem;
+      color: $text-primary;
+      font-size: 0.85rem;
+    }
+  }
+}
