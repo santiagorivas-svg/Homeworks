@@ -1,0 +1,6 @@
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background-color: #faf9f6;
+  border-right: 1px solid #f0eee6;
+}

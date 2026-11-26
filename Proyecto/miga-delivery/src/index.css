@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "DM Serif Display", serif;
+  --color-cream: #f8f5ee;
+  --color-paper: #f1ede4;
+  --color-ink: #24231f;
+  --color-muted: #79766e;
+  --color-line: #e4ded2;
+  --color-tomato: #e85b3f;
+  --color-tomato-dark: #ce4930;
+  --color-apricot: #f4ba77;
+  --color-apricot-dark: #d89b56;
+  --color-sage: #7c9b79;
+  --color-sage-dark: #52724f;
+  --shadow-soft: 0 10px 30px rgb(36 35 31 / 0.12);
+  --shadow-card: 0 22px 45px rgb(36 35 31 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: var(--color-apricot);
+  color: var(--color-ink);
+}
